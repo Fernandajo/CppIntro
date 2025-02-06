@@ -1,5 +1,5 @@
-NAME = ZombieHorde
-SRC = sources/main.cpp sources/Zombie.cpp sources/zombieHorde.cpp
+NAME = UnnecessaryViolence
+SRC = sources/main.cpp 
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
 COMPILER = c++
