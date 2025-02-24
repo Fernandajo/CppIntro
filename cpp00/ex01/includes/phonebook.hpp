@@ -6,6 +6,7 @@
 #include <iostream>
 #include <ios>
 #include <limits>
+#include <stdlib.h> 
 
 namespace ContactList //namespace to reference 
 {
@@ -34,7 +35,6 @@ namespace ContactList //namespace to reference
 
 	class Phonebook
 	{
-		
 		public:
 			ContactList::Contact contact[8];
 	};

@@ -1,4 +1,4 @@
-NAME = phonebook
+NAME = MyAwesomePhoneBook
 SRC = src/add.cpp src/set.cpp src/phonebook.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
