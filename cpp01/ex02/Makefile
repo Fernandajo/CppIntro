@@ -1,4 +1,4 @@
-NAME = Zombie
+NAME = HiThisIsBrain
 SRC = main.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))

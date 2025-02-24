@@ -1,5 +1,5 @@
-NAME = BraiiiiiiinnnzzzZ
-SRC = sources/main.cpp sources/Zombie.cpp sources/newZombie.cpp sources/randomChump.cpp
+NAME = SedIsForLosers
+SRC = main.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
 COMPILER = c++
@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(COMPILER) $(FLAGS) $^ -o $@
 
-$(OBJ_DIR)/%.o: sources/%.cpp | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 	$(COMPILER) $(FLAGS) -c $< -o $@
 
 $(OBJ_DIR):

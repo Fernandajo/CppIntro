@@ -1,5 +1,5 @@
-NAME = BraiiiiiiinnnzzzZ
-SRC = sources/main.cpp sources/Zombie.cpp sources/newZombie.cpp sources/randomChump.cpp
+NAME = harlFilter
+SRC = sources/main.cpp sources/Harl.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
 COMPILER = c++
