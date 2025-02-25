@@ -38,13 +38,10 @@ void	Harl::complain( std::string level )
 		break;
 	case 0:
 		Harl::debug();
-		// break;
 	case 1:
 		Harl::info();
-		// break;
 	case 2:
 		Harl::warning();
-		// break;
 	case 3:
 		Harl::error();
 		break;

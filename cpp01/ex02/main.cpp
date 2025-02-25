@@ -7,7 +7,7 @@ int	main()
 	std::string* stringPTR = &str;
 	std::string& stringREF = str;
 
-	std::cout << "str memory: " << &str << std::endl;
+	std::cout << "Str memory address: " << &str << std::endl;
 	std::cout << "Memory address held by stringPTR: " << stringPTR << std::endl;
 	std::cout << "Memory address held by stringREF: " << &stringREF << std::endl;
 

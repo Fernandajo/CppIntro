@@ -1,4 +1,4 @@
-NAME = harlFilter
+NAME = HarlFilter
 SRC = sources/main.cpp sources/Harl.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))

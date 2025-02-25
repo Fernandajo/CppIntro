@@ -37,5 +37,4 @@ void	Harl::complain( std::string level )
 			return;
 		}
 	}
-	
 }
