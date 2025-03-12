@@ -11,7 +11,7 @@ private:
 
 public:
 	Point();
-	Point(float _x, float _y);
+	Point(const Fixed& _x, const Fixed& _y);
 	Point(const Point& other);
 	~Point();
 	Point &operator=(const Point& other);
@@ -19,7 +19,8 @@ public:
 	int	getRawValueY();
 	float	getFloatValueX();
 	float	getFloatValueY();
-
+	Fixed	getFixedX() const;
+	Fixed	getFixedY() const;
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);

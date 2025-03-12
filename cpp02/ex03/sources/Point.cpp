@@ -2,13 +2,11 @@
 
 Point::Point() : x(0), y(0)
 {}
-Point::Point(float _x, float _y) : x(_x), y(_y)
+Point::Point(const Fixed& _x, const Fixed& _y) : x(_x), y(_y)
 {}
 //copy constructor
-Point::Point(const Point& other)
-{
-	*this = other;
-}
+Point::Point(const Point& other) : x(other.x), y(other.y)
+{}
 Point &Point::operator=(const Point& other) //copy assignment operator overload
 {
 	// std::cout << "Copy assignment operator called" << std::endl;
@@ -19,6 +17,15 @@ Point &Point::operator=(const Point& other) //copy assignment operator overload
 }
 Point::~Point()
 {}
+
+Fixed Point::getFixedX() const
+{
+	return x;
+}
+Fixed Point::getFixedY() const
+{
+	return y;
+}
 
 int	Point::getRawValueX()
 {

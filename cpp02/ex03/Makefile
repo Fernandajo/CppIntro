@@ -1,5 +1,5 @@
 NAME = BSP
-SRC = sources/main.cpp sources/Fixed.cpp sources/Point.cpp
+SRC = sources/main.cpp sources/Fixed.cpp sources/Point.cpp sources/bsp.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
 COMPILER = c++
