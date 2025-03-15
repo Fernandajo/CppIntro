@@ -15,7 +15,4 @@ public:
 	void guardGate();
 };
 
-
-
-
 #endif

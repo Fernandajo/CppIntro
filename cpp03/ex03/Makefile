@@ -1,5 +1,5 @@
-NAME = ScavTrap
-SRC = sources/main.cpp sources/ClapTrap.cpp sources/ScavTrap.cpp
+NAME = FragTrap
+SRC = sources/main.cpp sources/ClapTrap.cpp sources/ScavTrap.cpp sources/FragTrap.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
 COMPILER = c++
