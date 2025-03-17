@@ -2,13 +2,13 @@
 
 Fixed::Fixed() //default constructor
 {
-	std::cout << "Default constructor called." << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 	this->_value = 0;
 }
 
 Fixed::Fixed(const Fixed& other) //Copy constructor
 {
-	std::cout << "Copy constructor called." << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 

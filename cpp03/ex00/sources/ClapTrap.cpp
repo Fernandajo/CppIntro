@@ -13,7 +13,7 @@ ClapTrap::ClapTrap(void) : _name("claptrap"), _hitPoints(10), _energyPoints(10),
 //Destructor
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap " << _name << " was destroid!" << std::endl;
+	std::cout << "ClapTrap " << _name << " was destroyed!" << std::endl;
 }
 //Copy constructor
 ClapTrap::ClapTrap(const ClapTrap& other)
@@ -56,7 +56,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if(_energyPoints > 0)
+	if(_energyPoints > 0 && _hitPoints > 0)
 	{
 		std::cout << "ClapTrap " << _name << " is repairing itself with " << amount << " hit points!" << std::endl;
 		_hitPoints += amount;

@@ -57,6 +57,8 @@ Fixed Fixed::operator*(const Fixed& other) const
 
 Fixed Fixed::operator/(const Fixed& other) const
 {
+	if (other.toInt() == 0)
+		return 0;
 	Fixed ret(toFloat() / other.toFloat());
 	return ret;
 }

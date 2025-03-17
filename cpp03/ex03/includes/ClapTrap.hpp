@@ -17,9 +17,6 @@ public:
 	ClapTrap(const ClapTrap&other);
 	~ClapTrap();
 	ClapTrap& operator=(const ClapTrap& other);
-	void setHitPoints(unsigned int points);
-	void setEnergyPoints(unsigned int points);
-	void setAttackDamage(unsigned int amount);
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);

@@ -12,10 +12,13 @@ FragTrap::FragTrap() : ClapTrap("FragTrap")
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
+	std::cout << "FragTrap " << _name << " was created! (Default)" << std::endl;
 }
 
 FragTrap::~FragTrap()
-{}
+{
+	std::cout << "FragTrap " << _name << " was destroyed!" << std::endl;
+}
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
 	if (this != &other)
@@ -37,7 +40,10 @@ FragTrap::FragTrap(const FragTrap &other)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << _name << " requests a positive high-five!" << std::endl;
+	if (_hitPoints > 0 && _energyPoints > 0)
+		std::cout << "FragTrap " << _name << " requests a positive high-five!" << std::endl;
+	else
+		std::cout << "FragTrap " << _name << " can't High Five when dead!" << std::endl;
 }
 void FragTrap::attack(const std::string& target)
 {
