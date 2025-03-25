@@ -1,7 +1,7 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
-#include "Icharacter.hpp"
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
 class Character : public ICharacter
@@ -9,11 +9,9 @@ class Character : public ICharacter
 private:
 	std::string _name;
 	AMateria *_inventory[4];
-	static AMateria *materiasDropped[4];
-	static int		dropped;
 public:
 	Character();
-	Character(std::string &name);
+	Character(std::string const &name);
 	Character(const Character &other);
 	Character &operator=(const Character &other);
 	~Character();

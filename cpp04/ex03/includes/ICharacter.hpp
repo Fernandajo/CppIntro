@@ -3,9 +3,12 @@
 
 #include <string.h>
 #include <iostream>
+#include "AMateria.hpp"
 
 class ICharacter
 {
+protected:
+	std::string _name;
 public:
 	virtual ~ICharacter() {}
 	virtual std::string const & getName() const = 0;

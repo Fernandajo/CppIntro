@@ -21,7 +21,7 @@ Character::~Character()
 }
 
 // Constructor
-Character::Character(std::string &name) : _name(name)
+Character::Character(std::string const &name) : _name(name)
 {
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
