@@ -7,7 +7,7 @@
 class ICharacter
 {
 protected:
-	std::string _name;
+	std::string name;
 public:
 	virtual ~ICharacter() {}
 	virtual std::string const & getName() const = 0;

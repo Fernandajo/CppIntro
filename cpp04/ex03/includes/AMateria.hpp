@@ -3,14 +3,17 @@
 
 #include <string.h>
 #include <iostream>
+#include "Icharacter.hpp"
 
 class AMateria
 {
 protected:
 	std::string _type;
 public:
-	AMateria(/* args */);
+	AMateria();
 	~AMateria();
+	AMateria(const AMateria &other);
+	AMateria &operator=(const AMateria &other);
 	AMateria(std::string const & type);
 
 	std::string const & getType() const; //Returns the materia type
