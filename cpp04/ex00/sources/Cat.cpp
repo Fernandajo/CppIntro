@@ -16,7 +16,7 @@ Cat::~Cat()
 //copy constructor
 Cat::Cat(const Cat &other)
 {
-	_type = other._type;
+	*this = other;
 	std::cout << "Cat's copy constructor was called!" << std::endl;
 }
 

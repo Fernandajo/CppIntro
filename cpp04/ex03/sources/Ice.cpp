@@ -1,14 +1,19 @@
 #include "../includes/Ice.hpp"
 
+// Default constructor
 Ice::Ice() : AMateria("ice")
 {
 	std::cout << "Ice constructor was called!" << std::endl;
 }
+
+// Copy constructor
 Ice::Ice(const Ice &other)
 {
-	AMateria::
+	*this = other;
+	std::cout << "Ice copy constructor called!" << std::endl;
 }
 
+// Copy assignment operator
 Ice &Ice::operator=(const Ice &other)
 {
 	if(this != &other)
@@ -18,6 +23,7 @@ Ice &Ice::operator=(const Ice &other)
 	return *this;
 }
 
+// Destructor
 Ice::~Ice()
 {
 	std::cout << "Ice destructor was called!" << std::endl;

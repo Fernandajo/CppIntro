@@ -21,7 +21,7 @@ Animal::Animal(std::string typeAnimal) : _type(typeAnimal)
 //copy constructor
 Animal::Animal(const Animal &other)
 {
-	_type = other._type;
+	*this = other;
 	std::cout << "Animal " << _type << "'s copy constructor was called!" << std::endl;
 }
 

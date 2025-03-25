@@ -16,7 +16,7 @@ Dog::~Dog()
 //copy constructor
 Dog::Dog(const Dog &other)
 {
-	_type = other._type;
+	*this = other;
 	std::cout << "Dog's copy constructor was called!" << std::endl;
 }
 
