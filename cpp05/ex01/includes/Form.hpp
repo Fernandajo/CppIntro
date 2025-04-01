@@ -4,15 +4,16 @@
 #include <string.h>
 #include <iostream>
 #include <stdexcept>
-#include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
 private:
 	const std::string _name;
-	bool _signed;
 	const int _gradeToSign;
 	const int _gradeToExec;
+	bool _signed;
 public:
 	Form();
 	Form(const std::string name, int gradeSign, int gradeExec);
@@ -20,11 +21,11 @@ public:
 	Form &operator=(const Form &other);
 	~Form();
 
-	void beSigned(Bureaucrat &bureau);
+	void beSigned(Bureaucrat *bureau);
 
-	bool getSigned();
-	const int getGradeToSign();
-	const int getGradeToExec();
+	bool getSigned() const;
+	int getGradeToSign() const;
+	int getGradeToExec() const;
 	const std::string getName() const;
 
 	class GradeTooHighException : public std::exception {

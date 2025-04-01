@@ -1,4 +1,5 @@
 #include "../includes/Form.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 Form::Form() : _name("Default"), _gradeToSign(150), _gradeToExec(150)
 {
@@ -35,25 +36,31 @@ Form::~Form()
 	std::cout << "Form called: " << _name << " was destroyed!" << std::endl;
 }
 
-void Form::beSigned(Bureaucrat &bureau)
+void Form::beSigned(Bureaucrat *bureau)
 {
-	if (bureau.getGrade() > _gradeToSign)
+	if (!bureau)
+	{
+		std::cerr << "Error: Bureaucrat pointer is null!" << std::endl;
+		return ;
+	}
+	if (bureau->getGrade() > _gradeToSign)
 		throw GradeTooLowException();
 	else
 		_signed = true;
 }
 
-bool Form::getSigned() { return _signed; }
+bool Form::getSigned() const { return _signed; }
 
-const int Form::getGradeToSign() { return _gradeToSign; }
+int Form::getGradeToSign() const { return _gradeToSign; }
 
-const int Form::getGradeToExec() { return _gradeToExec; }
+int Form::getGradeToExec() const { return _gradeToExec; }
 
 const std::string Form::getName() const { return _name; }
 
 std::ostream &operator<<(std::ostream &out, const Form &other)
 {
-	out << "Form: " << other.getName() << ""
+	out << "Form: " << other.getName() << " has grade to sign of: " << other.getGradeToSign() << " and grade to execute of: " << other.getGradeToExec() << ", is the form signed? " << other.getSigned() << std::endl;
+	return (out);
 }
 
 const char* Form::GradeTooHighException::what() const throw() { return "Grade is too high!"; }
