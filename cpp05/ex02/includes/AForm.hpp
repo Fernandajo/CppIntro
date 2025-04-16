@@ -1,9 +1,11 @@
-#ifndef AFORM_HPP
-#define AFORM_HPP
+#pragma once
 
 #include <string.h>
+#include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <cstdlib>
+#include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -21,7 +23,7 @@ public:
 	AForm &operator=(const AForm &other);
 	virtual ~AForm();
 
-	virtual void beSigned(Bureaucrat *bureau) = 0;
+	void beSigned(Bureaucrat *bureau);
 	virtual void execute(Bureaucrat const & executor) const = 0;
 
 	bool getSigned() const;
@@ -37,8 +39,10 @@ public:
 		public:
 			const char* what() const throw();
 	};
+	class NotSignedException : public std::exception {
+		public:
+			const char* what() const throw();
+	};
 };
 
 std::ostream &operator<<(std::ostream &out, const AForm &other);
-
-#endif

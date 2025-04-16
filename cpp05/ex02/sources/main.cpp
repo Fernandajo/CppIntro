@@ -1,5 +1,8 @@
 #include "../includes/Bureaucrat.hpp"
-#include "../includes/Form.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+
 int main()
 {
 	try {
@@ -24,8 +27,9 @@ int main()
 	{
 		Bureaucrat Macious("Macious", 23);
 		std::cout << Macious;
-		Form r("R", 24, 23);
+		RobotomyRequestForm r("R");
 		Macious.signForm(r);
+		Macious.executeForm(r);
 	}
 	catch(const std::exception& e)
 	{
@@ -46,9 +50,9 @@ int main()
 	{
 		Bureaucrat Ferni("Ferni", 42);
 		std::cout << Ferni;
-		Form a("amor", 50, 55);
-		Form b(a);
-		Ferni.signForm(b);
+		ShrubberyCreationForm a("amor");
+		Ferni.signForm(a);
+		Ferni.executeForm(a);
 	}
 	catch(const std::exception& e)
 	{
@@ -57,7 +61,7 @@ int main()
 
 	try
 	{
-		Form k("job", 0, 42);
+		PresidentialPardonForm k("job");
 		std::cout << k;
 	}
 	catch(const std::exception& e)

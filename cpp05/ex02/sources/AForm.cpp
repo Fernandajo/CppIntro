@@ -36,18 +36,18 @@ AForm::~AForm()
 	std::cout << "AForm called: " << _name << " was destroyed!" << std::endl;
 }
 
-// void AForm::beSigned(Bureaucrat *bureau)
-// {
-// 	if (!bureau)
-// 	{
-// 		std::cerr << "Error: Bureaucrat pointer is null!" << std::endl;
-// 		return ;
-// 	}
-// 	if (bureau->getGrade() > _gradeToSign)
-// 		throw GradeTooLowException();
-// 	else
-// 		_signed = true;
-// }
+void AForm::beSigned(Bureaucrat *bureau)
+{
+	if (!bureau)
+	{
+		std::cerr << "Error: Bureaucrat pointer is null!" << std::endl;
+		return ;
+	}
+	if (bureau->getGrade() > _gradeToSign)
+		throw GradeTooLowException();
+	else
+		_signed = true;
+}
 
 bool AForm::getSigned() const { return _signed; }
 
@@ -59,9 +59,10 @@ const std::string AForm::getName() const { return _name; }
 
 std::ostream &operator<<(std::ostream &out, const AForm &other)
 {
-	out << "AForm: " << other.getName() << " has grade to sign of: " << other.getGradeToSign() << " and grade to execute of: " << other.getGradeToExec() << ", is the Aform signed? " << other.getSigned() << std::endl;
+	out << "AForm: " << other.getName() << " has grade to sign of: " << other.getGradeToSign() << " and grade to execute of: " << other.getGradeToExec() << ", is the form signed? " << other.getSigned() << std::endl;
 	return (out);
 }
 
-const char* AForm::GradeTooHighException::what() const throw() { return "Grade is too high!"; }
-const char* AForm::GradeTooLowException::what() const throw() { return "Grade is too low!"; }
+const char* AForm::GradeTooHighException::what() const throw() { return "Form's grade is too high!"; }
+const char* AForm::GradeTooLowException::what() const throw() { return "Form's grade is too low!"; }
+const char* AForm::NotSignedException::what() const throw() { return "Form is not signed!"; }

@@ -1,11 +1,8 @@
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#pragma once
 
-#include <string.h>
-#include <iostream>
-#include <stdexcept>
 #include "AForm.hpp"
 
+class AForm;
 class Bureaucrat
 {
 private:
@@ -38,5 +35,3 @@ public:
 		};
 };
 std::ostream	&operator<<(std::ostream &out, const Bureaucrat& other);
-
-#endif

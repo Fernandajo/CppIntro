@@ -1,5 +1,5 @@
-NAME = SigningForms
-SRC = sources/main.cpp sources/Bureaucrat.cpp sources/Form.cpp
+NAME = Forms
+SRC = sources/main.cpp sources/Bureaucrat.cpp sources/AForm.cpp sources/ShrubberyCreationForm.cpp sources/RobotomyRequestForm.cpp sources/PresidentialPardonForm.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.cpp=.o)))
 COMPILER = c++
