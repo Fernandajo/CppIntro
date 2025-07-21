@@ -73,6 +73,8 @@
 		"ranges": "cpp",
 		"span": "cpp",
 		"cinttypes": "cpp",
-		"__assertion_handler": "cpp"
-	}
+		"__assertion_handler": "cpp",
+		"*.tpp": "cpp"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
 }
