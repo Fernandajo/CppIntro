@@ -34,6 +34,23 @@ void Span::addNumber(int Num)
         _Store.push_back(Num);
 }
 
+void Span::addMultiNumbers()
+{
+    if (_Store.size() >= _NumLim)
+        throw std::out_of_range("Reached limit amount of elements");
+    else 
+    {
+        int size = _Store.size();
+        std::srand(static_cast<unsigned int>(std::time(NULL)));
+        for (unsigned int i = size; i < _NumLim; i++)
+        {
+            addNumber(std::rand());
+        }
+        
+    }
+}
+
+
 Span::~Span() {
     _Store.clear();
     std::cout << "Span deconstructor called!" << std::endl;

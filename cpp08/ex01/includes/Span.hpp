@@ -7,6 +7,7 @@
 #include <vector>
 #include <algorithm>
 #include <climits>
+#include <ctime>
 
 class Span
 {
@@ -18,6 +19,7 @@ public:
     Span(const Span &other);
     Span &operator=(const Span &other);
     void addNumber(int Num);
+    void addMultiNumbers();
     int shortestSpan();
     int longestSpan();
     ~Span();

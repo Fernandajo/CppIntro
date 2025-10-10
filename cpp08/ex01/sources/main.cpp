@@ -50,9 +50,7 @@ int main() {
         std::cout << "\n=== Large test with 10,000 numbers ===" << std::endl;
         unsigned int N = 10000;
         Span big(N);
-        for (unsigned int i = 0; i < N; ++i)
-            big.addNumber(std::rand());
-
+        big.addMultiNumbers();
         std::cout << "Shortest span: " << big.shortestSpan() << std::endl;
         std::cout << "Longest span:  " << big.longestSpan() << std::endl;
 
